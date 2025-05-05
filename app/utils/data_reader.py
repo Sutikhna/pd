@@ -8,7 +8,7 @@ import json
 print("Working directory:", os.getcwd())
 
 # Use absolute path for service account file in project root
-SERVICE_ACCOUNT_PATH = "pestdt-e9f8a81c8a68.json"
+SERVICE_ACCOUNT_PATH = "pestdt-08dc67f86eeb.json"
 print("Looking for service account at:", SERVICE_ACCOUNT_PATH)
 
 # Define explicit scopes for Google Sheets
