@@ -1,14 +1,17 @@
+# app/utils/data_reader.py
 import gspread
 import os
 
-# Path to your service account JSON file
+# Updated path (project root, not app folder)
 SERVICE_ACCOUNT_PATH = os.path.join(
-    os.path.dirname(os.path.dirname(__file__)), 
+    os.path.dirname(os.path.dirname(os.path.dirname(__file__))),  # Go up 3 levels from app/utils
     "pestdt-e9f8a81c8a68.json"
 )
 
 def get_latest_sensor_data():
     try:
+        # Rest of your code...
+
         # Authenticate with Google Sheets
         gc = gspread.service_account(filename=SERVICE_ACCOUNT_PATH)
         
