@@ -45,7 +45,7 @@ def get_latest_sensor_data():
         sheet = gc.open_by_key("1fXL0wIxqeHEehuy_NoCpjVjjcvnJNnJk9xULSdZjbKo")
         
         # Get first worksheet (or use a specific name if needed)
-        worksheet = sheet.sheet1  # Change to sheet.worksheet("YourSheetName") if needed
+        worksheet = sheet.SensorData  # Change to sheet.worksheet("YourSheetName") if needed
         
         # Get all records including headers
         records = worksheet.get_all_records()
