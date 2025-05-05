@@ -31,7 +31,7 @@ def get_latest_sensor_data():
         # Print first few characters of service account file to verify content
         with open(SERVICE_ACCOUNT_PATH, 'r') as f:
             sa_content = json.load(f)
-            print(f"Service account email: {sa_content.get('client_email')}")
+            print(f"Service account email: {sa_content.get('pestdtector@pestdt.iam.gserviceaccount.com')}")
         
         # Create credentials with explicit scopes
         credentials = service_account.Credentials.from_service_account_file(
