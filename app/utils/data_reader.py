@@ -13,7 +13,7 @@ def get_latest_sensor_data():
         gc = gspread.service_account(filename=SERVICE_ACCOUNT_PATH)
         
         # Open your Google Sheet by ID (from sheet URL)
-        sheet = gc.open_by_key("YOUR_GOOGLE_SHEET_ID_HERE")  # Replace with your sheet ID
+        sheet = gc.open_by_key("1fXL0wIxqeHEehuy_NoCpjVjjcvnJNnJk9xULSdZjbKo")  # Replace with your sheet ID
         
         # Select worksheet (use correct sheet name/index)
         worksheet = sheet.worksheet("SensorData")  # Change to your sheet name
