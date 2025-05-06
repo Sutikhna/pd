@@ -9,6 +9,10 @@ MODEL_PATH = os.path.join(os.path.dirname(__file__), "model", "pest_detector_mod
 with open(MODEL_PATH, "rb") as f:
     model = pickle.load(f)
 
+@app.get("/")
+def root():
+    return {"message": "Pest Detection API is running."}
+
 @app.get("/predict")
 def predict():
     data = get_latest_sensor_data()
@@ -27,4 +31,3 @@ def predict():
         },
         "pest_detected": bool(prediction)
     }
-
