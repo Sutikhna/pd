@@ -31,7 +31,8 @@ def get_latest_sensor_data():
         # Print first few characters of service account file to verify content
         with open(SERVICE_ACCOUNT_PATH, 'r') as f:
             sa_content = json.load(f)
-            print(f"Service account email: {sa_content.get('pestdtector@pestdt.iam.gserviceaccount.com')}")
+           print(f"Service account email: {sa_content.get('client_email')}")
+
         
         # Create credentials with explicit scopes
         credentials = service_account.Credentials.from_service_account_file(
@@ -45,7 +46,7 @@ def get_latest_sensor_data():
         sheet = gc.open_by_key("1fXL0wIxqeHEehuy_NoCpjVjjcvnJNnJk9xULSdZjbKo")
         
         # Get first worksheet (or use a specific name if needed)
-        worksheet = sheet.SensorData  # Change to sheet.worksheet("YourSheetName") if needed
+        worksheet = sheet.worksheet("SensorData")  # Change to sheet.worksheet("YourSheetName") if needed
         
         # Get all records including headers
         records = worksheet.get_all_records()
